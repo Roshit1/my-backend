@@ -23,7 +23,7 @@ app.use('/api/notes', require('./routes/notes'))
 app.get('/', (req, res) => {
   res.send('Hello World from iNotebook backend!');
 });
-
-app.listen(port, () => {
-  console.log(`✅ iNotebook backend running at http://localhost:${port}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`iNotebook backend running on port ${PORT}`);
 });
